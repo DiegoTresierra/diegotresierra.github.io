@@ -4,39 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diego Tresierra - Página Personal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #eef2f3, #8e9eab);
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+      color: #2c3e50;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
+
     h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
     }
+
     p {
       font-size: 1.2rem;
-      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #3498db;
+    }
+
     footer {
-      position: absolute;
-      bottom: 10px;
+      margin-top: 30px;
       font-size: 0.9rem;
-      color: #777;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>¡Hola! Soy Diego Tresierra</h1>
-  <p>Bienvenido a mi página web personal. Aquí compartiré información sobre mis proyectos, intereses y experiencias en tecnología.</p>
-  <footer>&copy; 2025 Diego Tresierra</footer>
+  <div class="card">
+    <h1>¡Hola! Soy Diego Tresierra</h1>
+    <p>Bienvenido a mi página web personal. Aquí compartiré información sobre mis proyectos, intereses y experiencias en tecnología.</p>
+    
+    <div class="social-icons">
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <footer>&copy; 2025 Diego Tresierra</footer>
+  </div>
 </body>
 </html>
